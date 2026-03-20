@@ -1,4 +1,4 @@
-import { startTransition, useMemo, useState } from 'react'
+import { startTransition, useEffect, useMemo, useState } from 'react'
 import './App.css'
 import pivotPointLogo from './assets/pivotpoint-logo.png'
 import {
@@ -132,6 +132,13 @@ function App() {
   const [isAnalyzing, setIsAnalyzing] = useState(false)
 
   const activeStep = steps[stepIndex]
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' })
+    document.documentElement.scrollTop = 0
+    document.body.scrollTop = 0
+  }, [stepIndex])
+
   const result = useMemo(
     () =>
       buildValuationResult(
