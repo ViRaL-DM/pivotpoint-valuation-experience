@@ -1,5 +1,6 @@
 import { startTransition, useMemo, useState } from 'react'
 import './App.css'
+import pivotPointLogo from './assets/pivotpoint-logo.png'
 import {
   addBackProfileOptions,
   customerConcentrationOptions,
@@ -319,7 +320,7 @@ function App() {
           <div className="topbar-brand topbar-brand-logo">
             <img
               className="topbar-logo"
-              src="/pivotpoint-logo.png"
+              src={pivotPointLogo}
               alt="PivotPoint Company"
             />
           </div>
